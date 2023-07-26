@@ -49,7 +49,7 @@ const Login = () => {
 
             <div className="ml-64">
               <GoogleLogin
-                clientId='720071675864-o5p1val8o5bkdha667i0g021ekv09eqt.apps.googleusercontent.com'
+                clientId= {'704124284449-6ljqig1l69qftcaj5ano6sug9cnsq9ls.apps.googleusercontent.com' || '720071675864-o5p1val8o5bkdha667i0g021ekv09eqt.apps.googleusercontent.com'}
                 render={(renderProps) => (
                   <button
                     type="button"
