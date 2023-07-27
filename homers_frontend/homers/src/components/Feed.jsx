@@ -38,17 +38,14 @@ const Feed = () => {
   }
   return (
     <div>
-      {pins && (
-        <MasonryLayout pins={pins} />
+      {pins && <MasonryLayout pins={pins} />}
+      {pins && pins.length === 0 && (
+        <div className="flex flex-grow justify-center items-center h-auto">
+          <h1 className=" text-2xl  text-gray-500  text-black ">
+            No pins found.
+          </h1>
+        </div>
       )}
-      {
-        pins && pins.length === 0 && (
-          <div className="flex flex-grow justify-center items-center h-auto">
-            <h1 className="text-2xl text-gray-500">No pins found.</h1>
-          </div>
-        )
-
-      }
     </div>
   );
 };
