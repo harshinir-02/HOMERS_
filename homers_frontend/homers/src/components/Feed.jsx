@@ -31,7 +31,9 @@ const Feed = () => {
   const ideaName = categoryId || 'new';
   if (loading) {
     return (
-      <Spinner message={`We are adding ${ideaName} ideas to your feed!`} />
+      <div className='h-screen  flex items-center justify-center'>
+        <Spinner message={`We are adding ${ideaName} ideas to your feed!`} />
+      </div>
     );
   }
   return (
@@ -39,6 +41,14 @@ const Feed = () => {
       {pins && (
         <MasonryLayout pins={pins} />
       )}
+      {
+        pins && pins.length === 0 && (
+          <div className="flex flex-grow justify-center items-center h-auto">
+            <h1 className="text-2xl text-gray-500">No pins found.</h1>
+          </div>
+        )
+
+      }
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search"
             value={searchTerm}
-            onFocus={() => navigate('/search')}
+            onFocus={() => navigate("/search")}
             className="mr-2 p-2 w-full bg-purple outline-none text-black placeholder-black rounded-lg"
           />
         </div>
@@ -31,9 +31,32 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
         </div>
       </div>
     );
+  } else {
+    return (
+      <div className=" bg-white bg-cover flex gap-2 w-full pb-7 ">
+        <div className="flex justify-start items-center w-full ml-5 mt-5 px-2 rounded-md bg-purple border-none outline-none focus-within:shadow-sm">
+          <IoMdSearch fontSize={30} className="ml-1 " />
+          <input
+            type="text"
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search"
+            value={searchTerm}
+            onFocus={() => navigate("/search")}
+            className="mr-2 p-2 w-full bg-purple outline-none text-black placeholder-black rounded-lg"
+          />
+        </div>
+        <div className="flex gap-3 mt-5 ">
+          <Link
+            to="/login"
+            className="rounded-full w-12 h-12 md:w-14 md:h-12 flex justify-center items-center">
+            <>
+              <p className="text-black">Login</p>
+            </>
+          </Link>
+        </div>
+      </div>
+    );
   }
-
-  return null;
 };
 // this
 export default Navbar;
