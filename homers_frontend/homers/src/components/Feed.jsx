@@ -42,7 +42,7 @@ const Feed = () => {
       {pins && pins.length === 0 && (
         <div className="flex flex-grow justify-center items-center h-auto">
           <h1 className=" text-2xl  text-gray-500  text-black ">
-            No pins found.
+            No posts yet!
           </h1>
         </div>
       )}
