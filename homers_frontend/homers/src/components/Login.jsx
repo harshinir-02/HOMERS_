@@ -57,7 +57,7 @@ const Login = () => {
             <>
               {" "}
               <div className="mt-24 flex justify-center">
-                <img src={logo} width="360px" />
+                <img onClick={() => window.location.href = '/'} src={logo} width="360px" />
               </div>
               <div className="m-5 mt-0 max-[712px]:mt-6 text-2xl min-[712px]:text-4xl font-body text-black text-center subpixel-antialiased">
                 <h1>
