@@ -46,6 +46,10 @@ const PinDetail = ({ user }) => {
   };
 
   useEffect(() => {
+    if(!user){
+        window.location.href = '/login';
+        return;
+    }
     fetchPinDetails();
   }, [pinId]);
 
